@@ -1,0 +1,30 @@
+running develop
+running egg_info
+creating bug_algo.egg-info
+writing bug_algo.egg-info/PKG-INFO
+writing dependency_links to bug_algo.egg-info/dependency_links.txt
+writing entry points to bug_algo.egg-info/entry_points.txt
+writing requirements to bug_algo.egg-info/requires.txt
+writing top-level names to bug_algo.egg-info/top_level.txt
+writing manifest file 'bug_algo.egg-info/SOURCES.txt'
+reading manifest file 'bug_algo.egg-info/SOURCES.txt'
+writing manifest file 'bug_algo.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib/python3.10/site-packages/bug-algo.egg-link (link to .)
+
+Installed /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo
+running symlink_data
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/ament_index
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/ament_index/resource_index
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/ament_index/resource_index/packages
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/resource/bug_algo -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/ament_index/resource_index/packages
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/package.xml -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/launch
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/launch/maze_1_world.launch.py -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/launch
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/launch/maze_2_world.launch.py -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/launch
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/launch/z_wall_world.launch.py -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/launch
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/worlds
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/worlds/turtlebot3_maze2.world -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/worlds
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/worlds/turtlebot3_maze1.world -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/worlds
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/worlds/turtlebot3_wall.world -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/worlds
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/models

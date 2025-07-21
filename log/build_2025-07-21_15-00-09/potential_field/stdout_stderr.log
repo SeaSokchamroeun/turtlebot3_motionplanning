@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating potential_field.egg-info
+writing potential_field.egg-info/PKG-INFO
+writing dependency_links to potential_field.egg-info/dependency_links.txt
+writing entry points to potential_field.egg-info/entry_points.txt
+writing requirements to potential_field.egg-info/requires.txt
+writing top-level names to potential_field.egg-info/top_level.txt
+writing manifest file 'potential_field.egg-info/SOURCES.txt'
+reading manifest file 'potential_field.egg-info/SOURCES.txt'
+writing manifest file 'potential_field.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/lib/python3.10/site-packages/potential-field.egg-link (link to .)
+
+Installed /home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field
+running symlink_data
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/ament_index
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/ament_index/resource_index
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/ament_index/resource_index/packages
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field/resource/potential_field -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/ament_index/resource_index/packages
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field/package.xml -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field

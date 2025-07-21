@@ -1,0 +1,32 @@
+[0.557s] Invoking command in '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo': PYTHONPATH=/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/build --no-deps symlink_data
+[0.710s] running develop
+[0.799s] running egg_info
+[0.800s] creating bug_algo.egg-info
+[0.800s] writing bug_algo.egg-info/PKG-INFO
+[0.800s] writing dependency_links to bug_algo.egg-info/dependency_links.txt
+[0.800s] writing entry points to bug_algo.egg-info/entry_points.txt
+[0.800s] writing requirements to bug_algo.egg-info/requires.txt
+[0.800s] writing top-level names to bug_algo.egg-info/top_level.txt
+[0.800s] writing manifest file 'bug_algo.egg-info/SOURCES.txt'
+[0.801s] reading manifest file 'bug_algo.egg-info/SOURCES.txt'
+[0.801s] writing manifest file 'bug_algo.egg-info/SOURCES.txt'
+[0.802s] running build_ext
+[0.802s] Creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib/python3.10/site-packages/bug-algo.egg-link (link to .)
+[0.802s] 
+[0.803s] Installed /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo
+[0.803s] running symlink_data
+[0.803s] creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/ament_index
+[0.803s] creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/ament_index/resource_index
+[0.803s] creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/ament_index/resource_index/packages
+[0.803s] symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/resource/bug_algo -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/ament_index/resource_index/packages
+[0.803s] symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/package.xml -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo
+[0.803s] creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/launch
+[0.803s] symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/launch/maze_1_world.launch.py -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/launch
+[0.803s] symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/launch/maze_2_world.launch.py -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/launch
+[0.804s] symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/launch/z_wall_world.launch.py -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/launch
+[0.804s] creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/worlds
+[0.804s] symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/worlds/turtlebot3_maze2.world -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/worlds
+[0.804s] symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/worlds/turtlebot3_maze1.world -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/worlds
+[0.804s] symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/worlds/turtlebot3_wall.world -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/worlds
+[0.804s] creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/models
+[0.821s] Invoked command in '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo' returned '0': PYTHONPATH=/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/build --no-deps symlink_data

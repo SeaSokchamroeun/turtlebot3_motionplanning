@@ -1,0 +1,3 @@
+[console_scripts]
+bug2_nav_node = bug2_nav.bug2_nav:main
+

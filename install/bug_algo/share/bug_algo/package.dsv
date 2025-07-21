@@ -1,0 +1,9 @@
+source;share/bug_algo/hook/pythonpath.ps1
+source;share/bug_algo/hook/pythonpath.dsv
+source;share/bug_algo/hook/pythonpath.sh
+source;share/bug_algo/hook/ament_prefix_path.ps1
+source;share/bug_algo/hook/ament_prefix_path.dsv
+source;share/bug_algo/hook/ament_prefix_path.sh
+source;../../build/bug_algo/share/bug_algo/hook/pythonpath_develop.ps1
+source;../../build/bug_algo/share/bug_algo/hook/pythonpath_develop.dsv
+source;../../build/bug_algo/share/bug_algo/hook/pythonpath_develop.sh

@@ -1,0 +1,14 @@
+running develop
+running egg_info
+writing bug_algo.egg-info/PKG-INFO
+writing dependency_links to bug_algo.egg-info/dependency_links.txt
+writing entry points to bug_algo.egg-info/entry_points.txt
+writing requirements to bug_algo.egg-info/requires.txt
+writing top-level names to bug_algo.egg-info/top_level.txt
+reading manifest file 'bug_algo.egg-info/SOURCES.txt'
+writing manifest file 'bug_algo.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib/python3.10/site-packages/bug-algo.egg-link (link to .)
+
+Installed /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo
+running symlink_data

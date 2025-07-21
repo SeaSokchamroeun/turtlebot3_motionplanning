@@ -1,0 +1,186 @@
+[0.056s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.056s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x72892f253be0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72892f253760>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72892f253760>>)
+[0.163s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.163s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.163s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.163s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.163s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.163s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.163s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/roeunsea/turtlebot3_ws/src/motion_planning'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(bug_algo) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(bug_algo) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(bug_algo) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(bug_algo) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(bug_algo) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(bug_algo) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(bug_algo) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(bug_algo) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(bug_algo) by extension 'ros'
+[0.176s] DEBUG:colcon.colcon_core.package_identification:Package 'bug_algo' with type 'ros.ament_python' and name 'bug_algo'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['cmake', 'python']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'cmake'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(images) by extension 'python_setup_py'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(potential_field) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(potential_field) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(potential_field) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(potential_field) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(potential_field) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(potential_field) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(potential_field) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(potential_field) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(potential_field) by extension 'ros'
+[0.177s] DEBUG:colcon.colcon_core.package_identification:Package 'potential_field' with type 'ros.ament_python' and name 'potential_field'
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.188s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.188s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.189s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 20 installed packages in /home/roeunsea/turtlebot3_ws/install
+[0.190s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/roeunsea/Documents/ros2Workspace/RBFundaC/install
+[0.190s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 410 installed packages in /opt/ros/humble
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'bug_algo' build argument 'cmake_args' from command line to 'None'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'bug_algo' build argument 'cmake_target' from command line to 'None'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'bug_algo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'bug_algo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'bug_algo' build argument 'cmake_clean_first' from command line to 'False'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'bug_algo' build argument 'cmake_force_configure' from command line to 'False'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'bug_algo' build argument 'ament_cmake_args' from command line to 'None'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'bug_algo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'bug_algo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.215s] DEBUG:colcon.colcon_core.verb:Building package 'bug_algo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo', 'merge_install': False, 'path': '/home/roeunsea/turtlebot3_ws/src/motion_planning/bug_algo', 'symlink_install': True, 'test_result_base': None}
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'potential_field' build argument 'cmake_args' from command line to 'None'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'potential_field' build argument 'cmake_target' from command line to 'None'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'potential_field' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'potential_field' build argument 'cmake_clean_cache' from command line to 'False'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'potential_field' build argument 'cmake_clean_first' from command line to 'False'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'potential_field' build argument 'cmake_force_configure' from command line to 'False'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'potential_field' build argument 'ament_cmake_args' from command line to 'None'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'potential_field' build argument 'catkin_cmake_args' from command line to 'None'
+[0.215s] Level 5:colcon.colcon_core.verb:set package 'potential_field' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.215s] DEBUG:colcon.colcon_core.verb:Building package 'potential_field' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field', 'merge_install': False, 'path': '/home/roeunsea/turtlebot3_ws/src/motion_planning/potential_field', 'symlink_install': True, 'test_result_base': None}
+[0.215s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.216s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.216s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/roeunsea/turtlebot3_ws/src/motion_planning/bug_algo' with build type 'ament_python'
+[0.216s] Level 1:colcon.colcon_core.shell:create_environment_hook('bug_algo', 'ament_prefix_path')
+[0.217s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.217s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/hook/ament_prefix_path.ps1'
+[0.218s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/hook/ament_prefix_path.dsv'
+[0.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/hook/ament_prefix_path.sh'
+[0.218s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.218s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.221s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/roeunsea/turtlebot3_ws/src/motion_planning/potential_field' with build type 'ament_python'
+[0.221s] Level 1:colcon.colcon_core.shell:create_environment_hook('potential_field', 'ament_prefix_path')
+[0.221s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/hook/ament_prefix_path.ps1'
+[0.221s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/hook/ament_prefix_path.dsv'
+[0.221s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/hook/ament_prefix_path.sh'
+[0.222s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.222s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.375s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/roeunsea/turtlebot3_ws/src/motion_planning/bug_algo'
+[0.375s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.375s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.532s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/roeunsea/turtlebot3_ws/src/motion_planning/potential_field'
+[0.532s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.533s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.772s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field': PYTHONPATH=/home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field/build --no-deps symlink_data
+[0.773s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo': PYTHONPATH=/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/build --no-deps symlink_data
+[1.037s] Level 1:colcon.colcon_core.shell:create_environment_hook('bug_algo', 'pythonpath_develop')
+[1.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/share/bug_algo/hook/pythonpath_develop.ps1'
+[1.038s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo' returned '0': PYTHONPATH=/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/build --no-deps symlink_data
+[1.038s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/share/bug_algo/hook/pythonpath_develop.dsv'
+[1.038s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/share/bug_algo/hook/pythonpath_develop.sh'
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo' for CMake module files
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo' for CMake config files
+[1.042s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib'
+[1.042s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/bin'
+[1.042s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib/pkgconfig/bug_algo.pc'
+[1.042s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/lib/python3.10/site-packages'
+[1.042s] Level 1:colcon.colcon_core.shell:create_environment_hook('bug_algo', 'pythonpath')
+[1.042s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/hook/pythonpath.ps1'
+[1.043s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/hook/pythonpath.dsv'
+[1.043s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/hook/pythonpath.sh'
+[1.043s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/bin'
+[1.043s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bug_algo)
+[1.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/package.ps1'
+[1.044s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/package.dsv'
+[1.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/package.sh'
+[1.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/package.bash'
+[1.045s] INFO:colcon.colcon_core.shell:Creating package script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/bug_algo/package.zsh'
+[1.045s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug_algo/share/colcon-core/packages/bug_algo)
+[1.049s] Level 1:colcon.colcon_core.shell:create_environment_hook('potential_field', 'pythonpath_develop')
+[1.049s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field' returned '0': PYTHONPATH=/home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field/build --no-deps symlink_data
+[1.049s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field/share/potential_field/hook/pythonpath_develop.ps1'
+[1.050s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field/share/potential_field/hook/pythonpath_develop.dsv'
+[1.050s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/build/potential_field/share/potential_field/hook/pythonpath_develop.sh'
+[1.051s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field' for CMake module files
+[1.051s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field' for CMake config files
+[1.052s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/lib'
+[1.052s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/bin'
+[1.052s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/lib/pkgconfig/potential_field.pc'
+[1.052s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/lib/python3.10/site-packages'
+[1.052s] Level 1:colcon.colcon_core.shell:create_environment_hook('potential_field', 'pythonpath')
+[1.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/hook/pythonpath.ps1'
+[1.053s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/hook/pythonpath.dsv'
+[1.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/hook/pythonpath.sh'
+[1.054s] Level 1:colcon.colcon_core.environment:checking '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/bin'
+[1.054s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(potential_field)
+[1.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/package.ps1'
+[1.055s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/package.dsv'
+[1.055s] INFO:colcon.colcon_core.shell:Creating package script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/package.sh'
+[1.056s] INFO:colcon.colcon_core.shell:Creating package script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/package.bash'
+[1.056s] INFO:colcon.colcon_core.shell:Creating package script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/potential_field/package.zsh'
+[1.056s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/roeunsea/turtlebot3_ws/src/motion_planning/install/potential_field/share/colcon-core/packages/potential_field)
+[1.056s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.057s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.057s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.057s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.060s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.060s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.060s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.067s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.068s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/local_setup.ps1'
+[1.068s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/_local_setup_util_ps1.py'
+[1.069s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/setup.ps1'
+[1.070s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/local_setup.sh'
+[1.071s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/_local_setup_util_sh.py'
+[1.071s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/setup.sh'
+[1.072s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/local_setup.bash'
+[1.072s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/setup.bash'
+[1.073s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/local_setup.zsh'
+[1.073s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roeunsea/turtlebot3_ws/src/motion_planning/install/setup.zsh'

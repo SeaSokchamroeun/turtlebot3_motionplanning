@@ -1,0 +1,31 @@
+running develop
+running egg_info
+creating bug2_nav.egg-info
+writing bug2_nav.egg-info/PKG-INFO
+writing dependency_links to bug2_nav.egg-info/dependency_links.txt
+writing entry points to bug2_nav.egg-info/entry_points.txt
+writing requirements to bug2_nav.egg-info/requires.txt
+writing top-level names to bug2_nav.egg-info/top_level.txt
+writing manifest file 'bug2_nav.egg-info/SOURCES.txt'
+reading manifest file 'bug2_nav.egg-info/SOURCES.txt'
+writing manifest file 'bug2_nav.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/lib/python3.10/site-packages/bug2-nav.egg-link (link to .)
+Installing bug2_nav_node script to /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/lib/bug2_nav
+
+Installed /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug2_nav
+running symlink_data
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/ament_index
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/ament_index/resource_index
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/ament_index/resource_index/packages
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug2_nav/resource/bug2_nav -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/ament_index/resource_index/packages
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug2_nav/package.xml -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav/launch
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug2_nav/launch/maze_1_world.launch.py -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav/launch
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug2_nav/launch/maze_2_world.launch.py -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav/launch
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug2_nav/launch/z_wall_world.launch.py -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav/launch
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav/worlds
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug2_nav/worlds/turtlebot3_maze2.world -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav/worlds
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug2_nav/worlds/turtlebot3_maze1.world -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav/worlds
+symbolically linking /home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug2_nav/worlds/turtlebot3_wall.world -> /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav/worlds
+creating /home/roeunsea/turtlebot3_ws/src/motion_planning/install/bug2_nav/share/bug2_nav/models
