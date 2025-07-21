@@ -1,0 +1,172 @@
+import rclpy
+from rclpy.node import Node
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
+from sensor_msgs.msg import LaserScan
+import math
+from tf_transformations import euler_from_quaternion
+import numpy as np
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+
+class PotentialFieldNavigator(Node):
+    def __init__(self):
+        super().__init__('potential_field_navigator')
+
+        # Declare parameters
+        self.declare_parameter('goal_x', 5.0)
+        self.declare_parameter('goal_y', 6.5)
+        self.declare_parameter('attractive_gain', 0.5)
+        self.declare_parameter('repulsive_gain', 1.0)
+        self.declare_parameter('obstacle_influence_radius', 0.8)
+        self.declare_parameter('max_linear_velocity', 0.3)
+        self.declare_parameter('max_angular_velocity', 0.8)
+        self.declare_parameter('goal_threshold', 0.2)
+        self.declare_parameter('min_lidar_range', 0.12)
+        self.declare_parameter('max_lidar_range', 3.5)
+
+        # Get parameter values
+        self.goal_x = self.get_parameter('goal_x').get_parameter_value().double_value
+        self.goal_y = self.get_parameter('goal_y').get_parameter_value().double_value
+        self.attractive_gain = self.get_parameter('attractive_gain').get_parameter_value().double_value
+        self.repulsive_gain = self.get_parameter('repulsive_gain').get_parameter_value().double_value
+        self.obstacle_influence_radius = self.get_parameter('obstacle_influence_radius').get_parameter_value().double_value
+        self.max_linear_velocity = self.get_parameter('max_linear_velocity').get_parameter_value().double_value
+        self.max_angular_velocity = self.get_parameter('max_angular_velocity').get_parameter_value().double_value
+        self.goal_threshold = self.get_parameter('goal_threshold').get_parameter_value().double_value
+        self.min_lidar_range = self.get_parameter('min_lidar_range').get_parameter_value().double_value
+        self.max_lidar_range = self.get_parameter('max_lidar_range').get_parameter_value().double_value
+
+        self.get_logger().info(f"Goal: ({self.goal_x}, {self.goal_y})")
+        self.get_logger().info(f"Attractive Gain: {self.attractive_gain}")
+        self.get_logger().info(f"Repulsive Gain: {self.repulsive_gain}")
+        self.get_logger().info(f"Obstacle Influence Radius: {self.obstacle_influence_radius}")
+        self.get_logger().info(f"LiDAR Range: [{self.min_lidar_range}, {self.max_lidar_range}]")
+
+        # Current robot pose
+        self.current_x = 0.0
+        self.current_y = 0.0
+        self.current_theta = 0.0
+
+        # LiDAR data storage
+        self.lidar_ranges = []
+        self.lidar_angles = []
+
+        # Publisher for velocity commands
+        self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 10)
+
+        # Subscriber for odometry data
+        self.odom_subscription = self.create_subscription(
+            Odometry,
+            'odom',
+            self.odometry_callback,
+            10)
+
+        # Subscriber for LiDAR data with QoS
+        qos = QoSProfile(reliability=ReliabilityPolicy.RELIABLE, history=HistoryPolicy.KEEP_LAST, depth=10)
+        self.scan_subscription = self.create_subscription(
+            LaserScan,
+            'scan',
+            self.scan_callback,
+            qos)
+
+        # Timer for control loop (initially disabled)
+        self.timer = self.create_timer(0.1, self.control_loop)
+        self.timer.cancel()
+        self.create_timer(2.0, self.start_control_loop)
+
+    def start_control_loop(self):
+        if len(self.lidar_ranges) > 0:
+            self.get_logger().info("LiDAR data received, starting control loop")
+            self.timer.reset()
+        else:
+            self.get_logger().warn("Still waiting for LiDAR data...")
+
+    def odometry_callback(self, msg):
+        self.current_x = msg.pose.pose.position.x
+        self.current_y = msg.pose.pose.position.y
+        orientation_q = msg.pose.pose.orientation
+        orientation_list = [orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w]
+        _, _, yaw = euler_from_quaternion(orientation_list)
+        self.current_theta = yaw
+
+    def scan_callback(self, msg):
+        self.lidar_ranges = np.array(msg.ranges)
+        self.lidar_angles = np.linspace(msg.angle_min, msg.angle_max, len(msg.ranges))
+        self.lidar_ranges = np.where(np.isinf(self.lidar_ranges) | np.isnan(self.lidar_ranges),
+                                     self.max_lidar_range, self.lidar_ranges)
+        self.lidar_ranges = np.clip(self.lidar_ranges, self.min_lidar_range, self.max_lidar_range)
+        self.get_logger().info(f"Received {len(self.lidar_ranges)} LiDAR ranges")
+
+    def calculate_attractive_force(self):
+        dx = self.goal_x - self.current_x
+        dy = self.goal_y - self.current_y
+        distance_to_goal = math.sqrt(dx**2 + dy**2)
+        if distance_to_goal < self.goal_threshold:
+            self.get_logger().info("Goal reached!")
+            return 0.0, 0.0
+        fx_attractive = self.attractive_gain * dx
+        fy_attractive = self.attractive_gain * dy
+        return fx_attractive, fy_attractive
+
+    def calculate_repulsive_force(self):
+        fx_repulsive = 0.0
+        fy_repulsive = 0.0
+        if len(self.lidar_ranges) == 0:
+            self.get_logger().warn("No LiDAR data available")
+            return fx_repulsive, fy_repulsive
+        for i, distance in enumerate(self.lidar_ranges):
+            if distance < self.obstacle_influence_radius:
+                angle = self.lidar_angles[i]
+                obs_x_robot = distance * math.cos(angle)
+                obs_y_robot = distance * math.sin(angle)
+                obs_x_world = self.current_x + obs_x_robot * math.cos(self.current_theta) - obs_y_robot * math.sin(self.current_theta)
+                obs_y_world = self.current_y + obs_x_robot * math.sin(self.current_theta) + obs_y_robot * math.cos(self.current_theta)
+                dx_obs = obs_x_world - self.current_x
+                dy_obs = obs_y_world - self.current_y
+                dist_to_obs = max(math.sqrt(dx_obs**2 + dy_obs**2), 0.01)
+                force_magnitude = self.repulsive_gain * (1.0 / dist_to_obs - 1.0 / self.obstacle_influence_radius) / (dist_to_obs**2)
+                angle_to_obs = math.atan2(dy_obs, dx_obs)
+                fx_repulsive += force_magnitude * -math.cos(angle_to_obs)
+                fy_repulsive += force_magnitude * -math.sin(angle_to_obs)
+        return fx_repulsive, fy_repulsive
+
+    def control_loop(self):
+        if len(self.lidar_ranges) == 0:
+            self.get_logger().warn("Waiting for LiDAR data...")
+            return
+        fx_attractive, fy_attractive = self.calculate_attractive_force()
+        fx_repulsive, fy_repulsive = self.calculate_repulsive_force()
+        fx_total = fx_attractive + fx_repulsive
+        fy_total = fy_attractive + fy_repulsive
+        force_angle_world = math.atan2(fy_total, fx_total)
+        force_magnitude = math.sqrt(fx_total**2 + fy_total**2)
+        angle_relative_to_robot = force_angle_world - self.current_theta
+        linear_x = force_magnitude * math.cos(angle_relative_to_robot)
+        linear_x = max(min(linear_x, self.max_linear_velocity), -self.max_linear_velocity)
+        angular_z = angle_relative_to_robot
+        angular_z = math.atan2(math.sin(angular_z), math.cos(angular_z))
+        angular_z = max(min(angular_z, self.max_angular_velocity), -self.max_angular_velocity)
+        twist_msg = Twist()
+        twist_msg.linear.x = linear_x
+        twist_msg.angular.z = angular_z
+        distance_to_goal = math.sqrt((self.goal_x - self.current_x)**2 + (self.goal_y - self.current_y)**2)
+        if distance_to_goal < self.goal_threshold:
+            twist_msg.linear.x = 0.0
+            twist_msg.angular.z = 0.0
+            self.get_logger().info("Goal reached. Stopping robot.")
+        self.publisher_.publish(twist_msg)
+
+def main(args=None):
+    rclpy.init(args=args)
+    navigator = PotentialFieldNavigator()
+    try:
+        rclpy.spin(navigator)
+    except KeyboardInterrupt:
+        navigator.get_logger().info("Shutting down")
+    finally:
+        navigator.publisher_.publish(Twist())
+        navigator.destroy_node()
+        rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
