@@ -1,9 +1,0 @@
-source;share/potential_field/hook/pythonpath.ps1
-source;share/potential_field/hook/pythonpath.dsv
-source;share/potential_field/hook/pythonpath.sh
-source;share/potential_field/hook/ament_prefix_path.ps1
-source;share/potential_field/hook/ament_prefix_path.dsv
-source;share/potential_field/hook/ament_prefix_path.sh
-source;../../build/potential_field/share/potential_field/hook/pythonpath_develop.ps1
-source;../../build/potential_field/share/potential_field/hook/pythonpath_develop.dsv
-source;../../build/potential_field/share/potential_field/hook/pythonpath_develop.sh

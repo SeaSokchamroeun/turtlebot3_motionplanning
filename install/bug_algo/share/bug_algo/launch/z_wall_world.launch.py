@@ -1,1 +1,0 @@
-/home/roeunsea/turtlebot3_ws/src/motion_planning/build/bug_algo/launch/z_wall_world.launch.py
